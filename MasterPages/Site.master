@@ -1,0 +1,41 @@
+<%@ Master Language="VB" AutoEventWireup="false"
+    CodeFile="Site.master.vb"
+    Inherits="MasterPages_Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Lecture Reminder System</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Scripts/site.js"></script>
+</head>
+<body>
+
+<form runat="server">
+
+    <!-- HEADER -->
+    <div class="header">
+        Lecture Reminder & Learning System
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <asp:HyperLink runat="server" NavigateUrl="~/Authentication/Login.aspx">Login</asp:HyperLink>
+        <asp:HyperLink runat="server" NavigateUrl="~/Authentication/Register.aspx">Register</asp:HyperLink>
+        <asp:HyperLink runat="server" NavigateUrl="~/Authentication/Logout.aspx">Logout</asp:HyperLink>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Lecture Reminder System | ASP.NET VB.NET
+    </div>
+
+</form>
+
+</body>
+</html>
